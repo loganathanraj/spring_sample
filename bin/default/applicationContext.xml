@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+   
+   <!--bean dependency using the bean setter property,construction-ref, autowire-->
+ <!-- <bean name = "customerRepository" class = "com.sample.spring.repository.CustomerRepositoryImpl" />
+      property type :
+      <bean name = "customerService" class = "com.sample.spring.service.CustomerServiceImpl">
+ 	      <property name="customerRepository" ref = "customerRepository" />
+      </bean> 
+       property type :
+      <bean name = "customerService" class = "com.sample.spring.service.CustomerServiceImpl">
+ 	      <constructor-args index ="0" ref = "customerRepository" />
+      </bean> 
+      autowire :
+      <bean name = "customerService" class = "com.sample.spring.service.CustomerServiceImpl" autowire="byType">
+ 	  -->
+ 	  <!--  annoation using the context component-->
+      <context:annotation-config/>
+      <context:component-scan base-package = "com.sample.spring"/>
+ </beans>

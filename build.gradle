@@ -1,0 +1,24 @@
+plugins {
+  id 'java'
+  id 'eclipse'
+ }
+
+version = '0.0.2'
+
+jar {
+ manifest {
+     attributes 'Main-class': 'com.sample.spring.Application'
+     }
+   } 
+
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    // Use JUnit test framework
+    implementation 'org.springframework:spring-context:5.+','commons-logging:commons-logging:1.2'
+    testImplementation 'junit:junit:4.12'
+}
